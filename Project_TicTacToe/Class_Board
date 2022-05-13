@@ -1,3 +1,22 @@
 # Class Board
 
 ## Implement Bard::Draw() Method
+#include <iostream>
+
+using namespace std;
+void drawBoard(){
+    cout<<"   |    | \n ";
+    cout<<"--|----|-- \n";
+    cout<<"   |    | \n ";
+    cout<<"--|----|-- \n";
+     cout<<"   |    | \n ";
+
+}
+
+
+int main()
+{
+    drawBoard();
+
+    return 0;
+}
