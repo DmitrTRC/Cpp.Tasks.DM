@@ -3,6 +3,8 @@
 ## Implement Bard::Draw() Method
 #include <iostream>
 
+//TODO: Move code to separate file
+
 using namespace std;
 void drawBoard(){
     cout<<"   |    | \n ";
