@@ -9,7 +9,7 @@
 using namespace std;
 
 void drawBoard () {
-    cout << "   |    | \n ";
+    cout << "   |    | \n "
     cout << "--|----|-- \n";
     cout << "   |    | \n ";
     cout << "--|----|-- \n";
