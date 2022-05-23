@@ -44,6 +44,12 @@ void iStack::pop () {
 size_t iStack::size () { return static_cast<size_t>(topIndex_ + 1); }
 
 //TODO: проверить на пустой стек и обработать ошибку по аналогии с функцией pop
-int iStack::top () { return frame_ptr[topIndex_]; }
+int iStack::top () {
+    if (topIndex_ == -1){
+        std::cout << "Pop error : Stack is empty! " << std::endl;
+    }else{
+        return frame_ptr[topIndex_];
+    }
+}
 
 bool iStack::empty () { return topIndex_ == -1; }
