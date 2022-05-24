@@ -3,13 +3,18 @@
 //
 
 #include <iostream>
+#include <array>
 
 //TODO: Move code to separate file next time!
 
+
 using namespace std;
 
-void drawBoard () {
-    cout << "   |    | \n "
+
+//TODO: Add arguments for current positions of players
+// board  = { '#', 'X', 'O' , 'X', 'O', 'X', 'O', 'X', 'O' , 'X' }
+void drawBoard (std::array<char, 10> &board) {
+    cout << "   |    | \n ";
     cout << "--|----|-- \n";
     cout << "   |    | \n ";
     cout << "--|----|-- \n";
@@ -18,6 +23,7 @@ void drawBoard () {
 }
 
 int main () {
-    drawBoard ();
+    std::array<char, 10> board  = { '#', 'X', 'O' , 'X', 'O', 'X', 'O', 'X', 'O' , 'X' };
+    drawBoard (board);
     return 0;
 }

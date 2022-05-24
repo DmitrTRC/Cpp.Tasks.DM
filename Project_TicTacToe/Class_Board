@@ -8,12 +8,13 @@
 using namespace std;
 
 
-
+//TODO: Test with case of string input
+//SOF: C++ Validate input integer between 1 and 9
 int InputNextMove(){
     int number;
     cout<<"Input and return an integer number in range 1 to 9\n";
     while(!((number <= 9) && (number >= 1))){
-        cin>>number;
+        cin >> number;
     }
     
     return number;
@@ -21,20 +22,3 @@ int InputNextMove(){
     
 }
 
-void drawBoard(){
-    cout<<"   |    | \n ";
-    cout<<"--|----|-- \n";
-    cout<<"   |    | \n ";
-    cout<<"--|----|-- \n";
-     cout<<"   |    | \n ";
-
-}
-
-
-int main()
-{
-    drawBoard();
-    InputNextMove();
-
-    return 0;
-}
