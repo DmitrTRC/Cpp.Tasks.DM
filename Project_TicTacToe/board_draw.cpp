@@ -3,22 +3,18 @@
 //
 
 #include <iostream>
-#include <array>
-
-//TODO: Move code to separate file next time!
-
 
 using namespace std;
-
-
-//TODO: Add arguments for current positions of players
-// board  = { '#', 'X', 'O' , 'X', 'O', 'X', 'O', 'X', 'O' , 'X' }
+#include <array>
 void drawBoard (std::array<char, 10> &board) {
-    cout << "   |    | \n ";
-    cout << "--|----|-- \n";
-    cout << "   |    | \n ";
-    cout << "--|----|-- \n";
-    cout << "   |    | \n ";
+    cout << "   |     | \n ";
+    cout<<board[1]<<" | "<<board[2]<<"   | "<<board[3]<<" \n";
+    cout << "---|-----|--- \n";
+    cout<<" "<<board[4]<<" | "<<board[5]<<"   | "<<board[6]<<" \n";
+    cout << "   |     | \n ";
+    cout << "--|-----|-- \n";
+    cout<<" "<<board[7]<<" | "<<board[8]<<"   | "<<board[9]<<" \n";
+    cout << "   |     | \n ";
 
 }
 
