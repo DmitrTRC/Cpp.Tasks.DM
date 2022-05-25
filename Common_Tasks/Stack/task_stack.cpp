@@ -1,4 +1,5 @@
 #include <iostream>
+#include <stdexcept>
 
 
 #define STACK_MAX_SIZE 10
@@ -33,6 +34,7 @@ void iStack::push (int number) {
     }
 }
 
+//TODO: Throw exception if stack is empty
 void iStack::pop () {
     if (topIndex_ == -1) {
         std::cout << "Pop error : Stack is empty! " << std::endl;
@@ -43,10 +45,11 @@ void iStack::pop () {
 
 size_t iStack::size () { return static_cast<size_t>(topIndex_ + 1); }
 
-//TODO: проверить на пустой стек и обработать ошибку по аналогии с функцией pop
+
 int iStack::top () {
     if (topIndex_ == -1){
         std::cout << "Pop error : Stack is empty! " << std::endl;
+        throw std::runtime_error("Stack is empty!");
     }else{
         return frame_ptr[topIndex_];
     }

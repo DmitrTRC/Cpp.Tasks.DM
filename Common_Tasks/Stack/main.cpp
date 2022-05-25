@@ -4,6 +4,8 @@
 
 int main () {
     iStack is;
+
+    is.top();
     if (is.empty ())
         std::cout << "Empty! " << std::endl;
     is.push (5);
