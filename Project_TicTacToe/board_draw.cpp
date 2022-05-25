@@ -18,6 +18,18 @@ void drawBoard (std::array<char, 10> &board) {
 
 }
 
+int InputNextMove(){
+    int number;
+    cout<<"Input and return an integer number in range 1 to 9\n";
+    while(!((number <= 9) && (number >= 1))){
+        cin>>number;
+        if(!cin >> number){
+        cin.clear();
+        cin.ignore(5000,'\n');   
+        }   
+    }
+    return number;   
+}
 int main () {
     std::array<char, 10> board  = { '#', 'X', 'O' , 'X', 'O', 'X', 'O', 'X', 'O' , 'X' };
     drawBoard (board);
