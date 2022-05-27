@@ -1,7 +1,5 @@
 # Class Game
 
-## Implement int Game::InputNextMove()
+## Draw game UML Diagram
 
-### Description
-
-#### Input and return an integer number in range 1 to 9
+### https://app.diagrams.net/
