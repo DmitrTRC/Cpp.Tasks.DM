@@ -45,7 +45,7 @@ int main () {
 //    printResult ({1, 3, 6, 10});
 //    printResult ( {1, 1, 1, 1, 1});
 
-    printResult (run.runningSum (num));//
+    printResult (run.runningSum (num));
     printResult (run.runningSum (num2));
 
 }
