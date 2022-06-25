@@ -15,7 +15,7 @@ class Solution
 	Rs += number;
       }
 
-    for (int i = nums.size (); i < nums.size (); i++)
+    for (int i =0; i < nums.size (); i++)
       {
 	Rs -= nums[i];
 	    if (Ls == Rs)
