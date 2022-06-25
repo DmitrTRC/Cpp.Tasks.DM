@@ -1,7 +1,10 @@
 //
 // Created by Dmitry Morozov on 21/6/22.
 //
+#include <iostream>
 
+using namespace std;
+#include <vector>
 class Solution
 {
   public:
@@ -25,5 +28,5 @@ class Solution
     return -1;
   }
 };
-int main{
+int main(){
 }
