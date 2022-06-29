@@ -1,49 +1,44 @@
 //
-// Created by Dmitry Morozov on 28/6/22.
+// Created by Dmitry Morozov on 29/6/22.
 //
 
-#include <set>
+#include <string>
 #include <map>
 #include <iostream>
+#include <set>
 
 
 class Solution {
 public:
-
-
     bool isIsomorphic (std::string s, std::string t) {
-
-        std::map<char, char> m;
+        std::map<char, char> cross_table;
         std::set<char> t_set;
-        for (int i = 0; i < s.size (); i++) {
-            if (m.find (s[i]) == m.end () && t_set.find (t[i]) == t_set.end ()) {
-                m[s[i]] = t[i];
-                t_set.insert (t[i]);
-            } else {
-                if (m[s[i]] != t[i])
-                    return false;
-            }
-        }
 
+        for (int i = 0; i < s.length (); i++) {
+            if (cross_table.find (s[i]) == cross_table.end () && t_set.find (t[i]) == t_set.end()) {
+                cross_table[s[i]] = t[i];
+                t_set.insert(t[i]);
+            } else {
+                if (cross_table[s[i]] != t[i]) {
+                    return false;
+                }
+            }
+
+        }
         return true;
     }
-
 };
 
-
-int main () {
+void test(){
     Solution s;
-    std::string s1 = "paper";
-    std::string s2 = "title";
-    assert (s.isIsomorphic (s1, s2) == true);
+    assert (s.isIsomorphic ("paper", "title") == true);
     assert (s.isIsomorphic ("egg", "add") == true);
-    assert (s.isIsomorphic ("","") == true);
-    assert (s.isIsomorphic ("deff", "rvee") == true);
-    assert (s.isIsomorphic ("ab", "aa") == false);
-    assert (s.isIsomorphic ("ab", "ac") == true);
-
-    return 0;
+    assert( s.isIsomorphic("ba", "aa") == false);
+    assert( s.isIsomorphic("ab", "aa") == false);
 }
 
+int main () {
+    test();
+    std::cout << "Test PASSED!" << std::endl;
 
-
+}
