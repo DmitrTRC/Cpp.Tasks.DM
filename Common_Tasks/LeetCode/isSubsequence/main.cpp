@@ -9,21 +9,24 @@
 #include <vector>
 #include <algorithm>
 
+using std::string;
+
 class Solution {
 public:
-bool isSubsequence(std::string s, std::string t) {
-int j=0;
-int i=0;
-while (i<s.size()&& j<t.size()){
-    if (s[i]==t[j]){
-        i+=1;
+    bool isSubsequence (std::string s, std::string t) {
+        int j = 0;
+        int i = 0;
+        while (i < s.size () && j < t.size ()) {
+            if (s[i] == t[j]) {
+                i += 1;
+            }
+            j += 1;
+        }
+        if (i == s.size ())
+            return true;
+        else return false;
     }
-    j+=1;
-}
-if (i==s.size())
-return true;
-else return false;
-
+};
     class Solution3 {
     public:
         bool isSubsequence (string s, string t) {
