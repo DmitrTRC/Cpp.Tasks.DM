@@ -33,7 +33,7 @@ public:
             class Solution {
             public:
                 bool isSubsequence (string s, string t) {
-                    const char *s_ptr = s.c_str ();
+                    cons t char *s_ptr = s.c_str ();
                     const char *t_ptr = t.c_str ();
                     while (*t_ptr) *s_ptr - *t_ptr++ ? 0 : s_ptr++;
                     return  !*s_ptr;
